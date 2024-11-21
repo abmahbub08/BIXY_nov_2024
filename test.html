@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Section Animation</title>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            margin: 2000px 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .service-section {
+            display: flex;
+            min-height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+            overflow-y: scroll;
+            height: 100vh;
+        }
+
+        .content-item {
+            margin-bottom: 100px;
+            height: 100vh;
+        }
+
+        .images {
+            flex: 1;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .images img {
+            position: fixed;
+            top: 50%;
+            right: 10%;
+            transform: translateY(-50%);
+            opacity: 0;
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            max-width: 400px;
+            height: auto;
+            z-index: 1;
+        }
+
+        .images img.active {
+            opacity: 1;
+            transform: translateY(-50%) scale(1.05);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="service-section">
+        <div class="content">
+            <div class="content-item" data-image="image1"> 
+                <h2>Service 1</h2>
+                <p>Details about Service 1...</p>
+            </div>
+            <div class="content-item" data-image="image2"> 
+                <h2>Service 2</h2>
+                <p>Details about Service 2...</p>
+            </div>
+            <div class="content-item" data-image="image3"> 
+                <h2>Service 3</h2>
+                <p>Details about Service 3...</p>
+            </div>
+        </div>
+        <div class="images">
+            <img src="image1.jpg" class="image image1" alt="Service 1">
+            <img src="image2.jpg" class="image image2" alt="Service 2">
+            <img src="image3.jpg" class="image image3" alt="Service 3">
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            const images = $('.images img');
+
+            $('.content-item').on('mouseenter', function() {
+                const imageClass = $(this).data('image');
+                images.removeClass('active');
+                $('.' + imageClass).addClass('active');
+            });
+
+            // Handle scrolling behavior to determine visibility
+            $('.content').on('scroll', function() {
+                $('.content-item').each(function() {
+                    const offsetTop = $(this).offset().top - $('.content').offset().top;
+                    const isInView = offsetTop >= 0 && offsetTop < $(window).height() / 2;
+                    
+                    if (isInView) {
+                        const imageClass = $(this).data('image');
+                        images.removeClass('active');
+                        $('.' + imageClass).addClass('active');
+                        return false; // Exit loop once the visible item is found
+                    }
+                });
+            });
+        });
+
+    </script>
+</body>
+</html>
