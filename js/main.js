@@ -161,19 +161,19 @@ $(document).ready(function () {
 
         if ($(window).width() > 992) {
             // console.log("body: " + $(window).scrollTop());
-            if ($(window).scrollTop() >= 900 && $(window).scrollTop() < 3780) {
-                $(".bx-right-border").height(($(window).scrollTop() - 900));
-            }
-            else if ($(window).scrollTop() <= 900) {
-                $(".bx-right-border").height(0);
-            }
+            // if ($(window).scrollTop() >= 900 && $(window).scrollTop() < 3780) {
+            //     $(".bx-right-border").height(($(window).scrollTop() - 900));
+            // }
+            // else if ($(window).scrollTop() <= 900) {
+            //     $(".bx-right-border").height(0);
+            // }
 
 
-            if ($(window).scrollTop() >= 1100 && $(window).scrollTop() < 3400) {
+            if ($(window).scrollTop() >= 1100 && $(window).scrollTop() < 2470) {
                 stickySection.addClass('fixed');
                 stickySection.removeClass('set-it-bottom');
             }
-            else if ($(window).scrollTop() >= 3400) {
+            else if ($(window).scrollTop() >= 2470) {
                 stickySection.addClass('set-it-bottom');
                 stickySection.removeClass('fixed');
             }
@@ -188,15 +188,15 @@ $(document).ready(function () {
             var animated_box_2 = $(".bx-wh-animation .bx-animation-box:nth-child(2)");
             var animated_box_3 = $(".bx-wh-animation .bx-animation-box:nth-child(3)");
 
-            if ($(window).scrollTop() >= 900 && $(window).scrollTop() < 2000) {
+            if ($(window).scrollTop() >= 600 && $(window).scrollTop() < 1305) {
                 animated_box.removeClass('active');
                 animated_box_1.addClass('active');
             }
-            else if ($(window).scrollTop() >= 2000 && $(window).scrollTop() < 2900) {
+            else if ($(window).scrollTop() >= 1305 && $(window).scrollTop() < 1905) {
                 animated_box.removeClass('active');
                 animated_box_2.addClass('active');
             }
-            else if ($(window).scrollTop() >= 2900) {
+            else if ($(window).scrollTop() >= 1905) {
                 animated_box.removeClass('active');
                 animated_box_3.addClass('active');
             }

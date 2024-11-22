@@ -229,8 +229,8 @@ header .navbar-nav .nav-link:hover {
     width: 88px;
     height: 40px;
     position: absolute;
-    bottom: 0;
-    left: 324px;
+    bottom: 50px;
+    left: 350px;
     z-index: 2;
 }
 
@@ -297,7 +297,7 @@ header .navbar-nav .nav-link:hover {
 
 .bx-special-questions {
     padding-right: 64px;
-    height: 100vh;
+    min-height: 600px;
     /* display: none; */
 }
 
@@ -478,10 +478,19 @@ header .navbar-nav .nav-link:hover {
 }
 
 .anim-second .anim-texts .anim-text:nth-child(3) {
-    animation-name: animtextvisible;
+    animation-name: animtextvisible2;
     animation-duration: 2s;
     animation-timing-function: linear;
+    animation-fill-mode: forwards;
     animation-delay: 4s;
+}
+
+.anim-second .anim-texts .anim-text:nth-child(3) .anim-text-blue {
+    animation-name: textS;
+    animation-duration: .3s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-delay: 5.6s;
 }
 
 .anim-second .anim-texts .anim-text:nth-child(4) {
@@ -553,6 +562,17 @@ header .navbar-nav .nav-link:hover {
 
     to {
         opacity: 1;
+    }
+}
+
+
+@keyframes textS {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
     }
 }
 
@@ -644,39 +664,48 @@ header .navbar-nav .nav-link:hover {
 }
 
 .anim-first .anim-texts .anim-text:nth-child(8) {
-    animation-name: animtextvisible;
+    animation-name: animtextvisible2;
     animation-duration: 1s;
     animation-timing-function: linear;
+    animation-fill-mode: forwards;
     animation-delay: 5s;
+}
+
+.anim-first .anim-texts .anim-text:nth-child(8) .big-x {
+    animation-name: textS;
+    animation-duration: .3s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-delay: 5.6s;
 }
 
 .anim-first .anim-texts .anim-text:nth-child(4) {
     animation-name: animtextvisible;
-    animation-duration: 2s;
+    animation-duration: .5s;
     animation-timing-function: linear;
     animation-delay: 6s;
 }
 
 .anim-first .anim-texts .anim-text:nth-child(5) {
     animation-name: animtextvisible;
-    animation-duration: 2s;
+    animation-duration: .5s;
     animation-timing-function: linear;
-    animation-delay: 8s;
+    animation-delay: 6.5s;
 }
 
 .anim-first .anim-texts .anim-text:nth-child(6) {
     animation-name: animtextvisible;
-    animation-duration: 2s;
+    animation-duration: .5s;
     animation-timing-function: linear;
-    animation-delay: 10s;
+    animation-delay: 7s;
 }
 
 .anim-first .anim-texts .anim-text:nth-child(7) {
     animation-name: animtextvisible2;
-    animation-duration: 2s;
+    animation-duration: .5s;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
-    animation-delay: 12s;
+    animation-delay: 7.5s;
 }
 
 /* --------icons */
@@ -719,7 +748,7 @@ header .navbar-nav .nav-link:hover {
     bottom: 40.6976%;
     right: 0;
     animation-name: iconvisible;
-    animation-duration: 1s;
+    animation-duration: .5s;
     animation-fill-mode: forwards;
     animation-delay: 6s;
 }
@@ -728,27 +757,27 @@ header .navbar-nav .nav-link:hover {
     top: 0;
     right: 0;
     animation-name: iconvisible;
-    animation-duration: 2s;
+    animation-duration: .5s;
     animation-fill-mode: forwards;
-    animation-delay: 8s;
+    animation-delay: 6.5s;
 }
 
 .anim-first .anim-icons .anim-icon:nth-child(6) {
     top: 0;
     left: 40.6976%;
     animation-name: iconvisible;
-    animation-duration: 2s;
+    animation-duration: .5s;
     animation-fill-mode: forwards;
-    animation-delay: 10s;
+    animation-delay: 7s;
 }
 
 .anim-first .anim-icons .anim-icon:nth-child(7) {
     top: 0;
     left: 0;
     animation-name: iconvisible;
-    animation-duration: 2s;
+    animation-duration: .5s;
     animation-fill-mode: forwards;
-    animation-delay: 12s;
+    animation-delay: 7.5s;
 }
 
 /* -----------anim first ends */
