@@ -155,6 +155,7 @@ $(document).ready(function () {
 
 
     // ============ on scroll (Our speciality)
+    /*
     $(window).on('scroll', function () {
         const stickySection = $('.sticky-section');
 
@@ -220,6 +221,54 @@ $(document).ready(function () {
         }
 
     });
+    */
+
+    // ----------- time interval animation
+
+    let intervalId;
+    let animId = 1;
+
+    // Function to start the interval
+
+    intervalId = setInterval(() => {
+        $(".bx-osa-anim-inner").removeClass('active');
+        var tab_class = ".osa-animBoxItem-" + animId;
+        setTimeout(function () {
+            $(tab_class).addClass('active');
+        }, 50);
+    }, 8000);
+
+
+    $(".bx-osa-tabBtn").click(function () {
+        clearInterval(intervalId);
+
+        var _t = this;
+
+        setTimeout(function () {
+            $(".bx-osa-tabBtn").removeClass('active');
+            $(_t).addClass('active');
+
+            var tab_index = $(_t).attr('data-tab');
+            animId = tab_index;
+            var tab_class = ".osa-animBoxItem-" + tab_index;
+
+            $(".bx-osa-anim-inner").removeClass('active');
+            $(tab_class).addClass('active');
+
+            intervalId = setInterval(() => {
+                $(".bx-osa-anim-inner").removeClass('active');
+                var tab_class = ".osa-animBoxItem-" + animId;
+                setTimeout(function () {
+                    $(tab_class).addClass('active');
+                }, 50);
+            }, 8000);
+        }, 50);
+
+    });
+
+
+
+
 
 });
 

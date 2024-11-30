@@ -30,9 +30,23 @@
         width: 500px;
         height: 500px;
     }
+
+    .bx-osa-tabs {
+        padding-right: 30px;
+        max-width: 490px;
+    }
+
+    .bx-osa-animbox {
+        padding-left: 30px;
+        width: 546px;
+    }
 }
 
 @media (max-width: 1199px) {
+    :root {
+        --icon-box: 76px;
+    }
+
     .primary-hd-1 {
         font-size: 60px;
     }
@@ -65,6 +79,33 @@
         font-size: 40px;
         line-height: 48px;
     }
+
+    .bx-osa-tabs {
+        max-width: 400px;
+    }
+
+    .osa-anim-icons,
+    .bx-anim-text,
+    .bx-anim-text .osa-txt {
+        width: 425px;
+        height: 425px;
+    }
+
+    .osa-anim-icons .osa-icon {
+        width: 74px;
+        height: 74px;
+    }
+
+    .a-text-xx {
+        font-size: 100px;
+        line-height: 100px;
+    }
+
+    .a-text-regular {
+        font-size: 50px;
+        line-height: 64px;
+    }
+
 }
 
 @media (max-width: 991px) {
@@ -81,7 +122,7 @@
     }
 
     .bx-hero-section {
-        padding: 15px;
+        padding: 40px 15px;
     }
 
     .bx-why-what-how {
@@ -125,6 +166,75 @@
 
     .bx-wh-animation,
     .bx-r-border-holder {
+        display: none;
+    }
+
+    /* -----new anim  */
+    .bx-osa-inner {
+        display: unset;
+    }
+
+    .bx-osa-tabs {
+        max-width: 100%;
+        width: 100%;
+        padding: 0;
+        position: relative;
+    }
+
+    .bx-osa-tab-box {
+        padding-bottom: 0;
+    }
+
+    .bx-osa-tabBtn {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        font-family: Inter;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 32px;
+        color: #797796;
+        letter-spacing: -0.48px;
+    }
+
+    .bx-osa-tabBtn.active {
+        color: var(--text-primary);
+        font-weight: 700;
+    }
+
+    .bx-osa-tab-box:nth-child(2) .bx-osa-tabBtn {
+        left: 82px;
+    }
+
+    .bx-osa-tab-box:nth-child(3) .bx-osa-tabBtn {
+        left: 170px;
+    }
+
+    .bx-tabText {
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        padding: 40px 0;
+    }
+
+
+    .bx-osa-animbox {
+        padding: 0;
+        margin: 0 auto;
+        width: 425px;
+        height: 425px;
+    }
+
+    .bx-service-item {
+        width: 100%;
+        padding: 0 40px;
+    }
+
+    .navbar-toggler {
         display: none;
     }
 }
@@ -285,6 +395,21 @@
 }
 
 @media (max-width: 575px) {
+    :root {
+        --icon-box: 76px;
+    }
+
+    .bx-our-specialty-animation {
+        padding-top: 40px;
+    }
+
+    .bx-speciality-heading {
+        margin-bottom: 20px;
+    }
+
+    .bx-service-item {
+        padding: 0;
+    }
 
     .bx-wh-animation,
     .bx-animation-box {
@@ -302,5 +427,23 @@
     .hd-text {
         font-size: 40px;
         line-height: 48px;
+    }
+
+    .bx-osa-animbox,
+    .osa-anim-icons,
+    .bx-anim-text,
+    .bx-anim-text .osa-txt {
+        width: 345px;
+        height: 345px;
+    }
+
+    .a-text-regular {
+        font-size: 34px;
+        line-height: 40px;
+    }
+
+    .a-text-xx {
+        font-size: 76px;
+        line-height: 76px;
     }
 }

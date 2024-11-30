@@ -6,6 +6,9 @@
     --Greyscale-80: #4B476E;
 
     --Blue-100: #2414AE;
+
+    --xx-time: .5s;
+    --icon-box: 96px;
 }
 
 *,
@@ -269,293 +272,250 @@ header .navbar-nav .nav-link:hover {
     padding-top: 57px;
 }
 
-.sticky-section {
-    height: 100%;
+.bx-our-specialty-animation {
+    padding-top: 80px;
 }
 
-.fixed {
-    position: fixed;
-    top: 0;
-    /* height: calc(100vh - 197px); */
-    height: 100vh;
-    z-index: 10;
+.bx-osa-tab-box {
+    padding-bottom: 40px;
+}
 
+.bx-osa-inner {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: start;
 }
 
-.set-it-bottom {
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-}
-
-.bx-speciality-heading {
-    margin-bottom: 80px;
-}
-
-.bx-special-questions {
+.bx-osa-tabs {
     padding-right: 64px;
-    min-height: 600px;
-    /* display: none; */
+    max-width: 639px;
+    width: 100%;
+    flex-shrink: 1;
 }
 
-.bx-special-questions.active {
-    display: block;
-}
-
-.bx-question {
-    color: var(--text-primary);
-    font-size: 32px;
-    font-weight: 600;
-    line-height: 40px;
-    margin: 0 0 8px;
-    padding: 0;
-}
-
-.bx-question-text {
+.bx-osa-tabBtn {
     color: var(--Greyscale-80);
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 40px;
+    letter-spacing: -0.64px;
+    margin-bottom: 8px;
+    padding: 0;
+    transition: .5s;
+    background-color: transparent;
+    border: none;
+}
+
+.bx-osa-tabBtn.active {
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.bx-tabText {
+    color: var(--Greyscale-80);
+    font-family: Inter;
     font-size: 20px;
+    font-style: normal;
     font-weight: 400;
     line-height: 32px;
-    margin-bottom: 40px;
-}
-
-.big-x {
-    font-size: 160px;
-    line-height: 160px;
-    font-weight: 900;
-    display: block;
-}
-
-.bx-animation-box {
     display: none;
+    transition: .5s;
 }
 
-.bx-animation-box.active {
+.bx-osa-tabBtn.active~.bx-tabText {
     display: block;
 }
 
-.bx-wh-animation {
-    min-height: 516px;
+/* -----animation box design ----- */
+.bx-osa-animbox {
+    width: 580px;
+    height: 516px;
     padding-left: 64px;
-    /* height: 100%; */
-}
-
-/* @keyframes animbar {
-    0% {
-        height: 0%;
-    }
-
-    33.33% {
-        height: 33.33%;
-    }
-
-    66.66% {
-        height: 66.66%;
-    }
-
-    100% {
-        height: 100%;
-    }
-} */
-
-.bx-why-what-how {
     position: relative;
-    /* height: 516px; */
 }
 
-/* .bx-why-what-how.anim::after {
-    content: "";
-    width: 1px;
-    height: 0;
-    position: absolute;
-    background-color: var(--Blue-100);
-    top: 0;
-    right: 0;
-
-    animation-name: animbar;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-duration: 42s;
-} */
-.bx-r-border-holder {
-    position: absolute;
-    width: 1px;
-    height: 100%;
-    /* background-color: #e98ed8; */
-    right: 0;
-    top: 0;
-    overflow: hidden;
-}
-
-.bx-right-border {
-    position: relative;
-    width: 1px;
-    height: 0%;
-    background-color: #2414AE;
-    right: 0;
-    top: 0;
-    z-index: 10;
-    /* transition: .5s; */
-}
-
-.bx-special-questions .bx-animation-box {
-    display: none;
-}
-
-.bx-special-questions .bx-animation-box.active {
-    display: block;
-}
-
-/* -------------animation box Starts------------- */
-.bx-animation-box {
+/* .bx-osa-anim-inner {
     width: 516px;
     height: 516px;
+    position: relative;
+} */
+.bx-osa-anim-inner {
+    display: none;
+    position: relative;
 }
 
-.anim-texts {
-    width: 420px;
-    height: auto;
+.bx-osa-anim-inner.active {
+    display: block;
+}
+
+.osa-anim-icons,
+.bx-anim-text {
+    width: 516px;
+    height: 516px;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .anim-text-blue {
-    color: var(--Blue-100);
+    color: var(--Blue-100) !important;
 }
 
-@keyframes animtextvisible {
-    0% {
-        opacity: 0;
-    }
-
-    40% {
-        opacity: 1;
-    }
-
-    60% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-    }
-}
-
-@keyframes animtextvisible2 {
-    0% {
-        opacity: 0;
-    }
-
-    40% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-.anim-text {
-    position: absolute;
-    top: 50%;
-    left: 0%;
-    transform: translate(-0%, -50%);
-    opacity: 0;
-}
-
-.anim-second .anim-texts .anim-text:nth-child(1) {
-    animation-name: animtextvisible;
-    animation-duration: 2s;
-    animation-timing-function: linear;
-}
-
-.anim-second .anim-texts .anim-text:nth-child(2) {
-    animation-name: animtextvisible;
-    animation-duration: 2s;
-    animation-timing-function: linear;
-    animation-delay: 2s;
-}
-
-.anim-second .anim-texts .anim-text:nth-child(3) {
-    animation-name: animtextvisible2;
-    animation-duration: 2s;
-    animation-timing-function: linear;
-    animation-fill-mode: forwards;
-    animation-delay: 4s;
-}
-
-.anim-second .anim-texts .anim-text:nth-child(3) .anim-text-blue {
-    animation-name: textS;
-    animation-duration: .3s;
-    animation-timing-function: linear;
-    animation-fill-mode: forwards;
-    animation-delay: 5.6s;
-}
-
-.anim-second .anim-texts .anim-text:nth-child(4) {
-    animation-name: animtextvisible;
-    animation-duration: 2s;
-    animation-timing-function: linear;
-    animation-delay: 6s;
-}
-
-.anim-second .anim-texts .anim-text:nth-child(5) {
-    animation-name: animtextvisible;
-    animation-duration: 2s;
-    animation-timing-function: linear;
-    animation-delay: 8s;
-}
-
-.anim-second .anim-texts .anim-text:nth-child(6) {
-    animation-name: animtextvisible;
-    animation-duration: 2s;
-    animation-timing-function: linear;
-    animation-delay: 10s;
-}
-
-.anim-second .anim-texts .anim-text:nth-child(7) {
-    animation-name: animtextvisible2;
-    animation-duration: 2s;
-    animation-timing-function: linear;
-    animation-fill-mode: forwards;
-    animation-delay: 12s;
-}
-
-
-
-.hd-text {
+.a-text-regular {
     color: var(--Greyscale-100);
+    font-family: Inter;
     font-size: 64px;
     font-style: normal;
     font-weight: 900;
     line-height: 80px;
     letter-spacing: -1.28px;
-    position: relative;
-    z-index: 2;
 }
 
-.anim-icons {
+.a-text-xx {
+    color: var(--Greyscale-100);
+    font-family: Inter;
+    font-size: 160px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 160px;
+    letter-spacing: -3.2px;
+}
+
+/* -------text animation */
+
+
+/* --- animation icon positions */
+.osa-anim-icons .osa-icon {
+    width: var(--icon-box);
+    height: var(--icon-box);
+
+    border-radius: 100px;
+    border: 1px solid #2414AE;
     position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
+    bottom: 0;
     left: 0;
-    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.anim-icons .anim-icon {
-    position: absolute;
-    width: 96px;
-    height: 96px;
+.osa-anim-icons .osa-icon img {
     opacity: 0;
-}
-
-.anim-icons .anim-icon img {
     max-width: 100%;
 }
 
-@keyframes iconvisible {
+@keyframes animIcon2 {
+    from {
+        bottom: 0;
+        left: 0;
+    }
+
+    to {
+        bottom: 0;
+        left: 40.6976%;
+    }
+}
+
+.osa-anim-icons .osa-animIcon-2 {
+    animation-name: animIcon2;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animIcon3 {
+    from {
+        bottom: 0;
+        left: 0;
+    }
+
+    to {
+        bottom: 0;
+        left: calc(100% - var(--icon-box));
+        right: 0;
+    }
+}
+
+.osa-anim-icons .osa-animIcon-3 {
+    animation-name: animIcon3;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animIcon4 {
+    from {
+        bottom: 0;
+        left: 0;
+    }
+
+    to {
+        bottom: 40.6976%;
+        left: calc(100% - var(--icon-box));
+    }
+}
+
+.osa-anim-icons .osa-animIcon-4 {
+    animation-name: animIcon4;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animIcon5 {
+    from {
+        bottom: 0;
+        left: 0;
+    }
+
+    to {
+        bottom: calc(100% - var(--icon-box));
+        left: calc(100% - var(--icon-box));
+    }
+}
+
+.osa-anim-icons .osa-animIcon-5 {
+    animation-name: animIcon5;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animIcon6 {
+    from {
+        bottom: 0;
+        left: 0;
+    }
+
+    to {
+        bottom: calc(100% - var(--icon-box));
+        left: 40.6976%;
+    }
+}
+
+.osa-anim-icons .osa-animIcon-6 {
+    animation-name: animIcon6;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animIcon7 {
+    from {
+        bottom: 0;
+        left: 0;
+    }
+
+    to {
+        bottom: calc(100% - var(--icon-box));
+        left: 0;
+    }
+}
+
+.osa-anim-icons .osa-animIcon-7 {
+    animation-name: animIcon7;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+/* -------Icon image animation */
+@keyframes iconImgOpacity {
     from {
         opacity: 0;
     }
@@ -565,8 +525,158 @@ header .navbar-nav .nav-link:hover {
     }
 }
 
+.osa-anim-icons .osa-icon img {
+    animation-name: iconImgOpacity;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
 
-@keyframes textS {
+}
+
+/* ---------for first one only ------ */
+
+.osa-anim-icons .osa-animIcon-1 img {
+    animation-delay: 1s;
+}
+
+.osa-anim-icons .osa-animIcon-2 img {
+    animation-delay: 2s;
+}
+
+.osa-anim-icons .osa-animIcon-3 img {
+    animation-delay: 3s;
+}
+
+.osa-anim-icons .osa-animIcon-4 img {
+    animation-delay: 4s;
+}
+
+.osa-anim-icons .osa-animIcon-5 img {
+    animation-delay: 5s;
+}
+
+.osa-anim-icons .osa-animIcon-6 img {
+    animation-delay: 6s;
+}
+
+.osa-anim-icons .osa-animIcon-7 img {
+    animation-delay: 7s;
+}
+
+/* -----------Ends */
+
+.osa-animBoxItem-1 .osa-anim-icons .osa-animIcon-1 img {
+    animation-delay: 1s;
+}
+
+.osa-animBoxItem-1 .osa-anim-icons .osa-animIcon-2 img {
+    animation-delay: 2s;
+}
+
+.osa-animBoxItem-1 .osa-anim-icons .osa-animIcon-3 img {
+    animation-delay: 3s;
+}
+
+.osa-animBoxItem-1 .osa-anim-icons .osa-animIcon-4 img {
+    animation-duration: var(--xx-time);
+    animation-delay: 4s;
+}
+
+.osa-animBoxItem-1 .osa-anim-icons .osa-animIcon-5 img {
+    animation-duration: var(--xx-time);
+    animation-delay: 4.5s;
+}
+
+.osa-animBoxItem-1 .osa-anim-icons .osa-animIcon-6 img {
+    animation-duration: var(--xx-time);
+    animation-delay: 5s;
+}
+
+.osa-animBoxItem-1 .osa-anim-icons .osa-animIcon-7 img {
+    animation-delay: 5.5s;
+}
+
+/* ----- anim text positions */
+.bx-anim-text .osa-txt {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 516px;
+    height: 516px;
+    position: absolute;
+    background-color: transparent;
+    opacity: 0;
+
+    animation-name: iconImgOpacity;
+    animation-duration: 1s;
+}
+
+.bx-anim-text .osa-animtext-1 {
+    animation-delay: 1s;
+}
+
+.bx-anim-text .osa-animtext-2 {
+    animation-delay: 2s;
+}
+
+.bx-anim-text .osa-animtext-3 {
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+
+.bx-anim-text .osa-animtext-4 {
+    animation-delay: 4s;
+}
+
+.bx-anim-text .osa-animtext-5 {
+    animation-delay: 5s;
+}
+
+.bx-anim-text .osa-animtext-6 {
+    animation-delay: 6s;
+}
+
+.bx-anim-text .osa-animtext-7 {
+    animation-delay: 7s;
+    animation-fill-mode: forwards;
+}
+
+/* -----for first one only---- */
+.osa-animBoxItem-1 .bx-anim-text .osa-animtext-1 {
+    animation-delay: 1s;
+}
+
+.osa-animBoxItem-1 .bx-anim-text .osa-animtext-2 {
+    animation-delay: 2s;
+}
+
+.osa-animBoxItem-1 .bx-anim-text .osa-animtext-3 {
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+
+.osa-animBoxItem-1 .bx-anim-text .osa-animtext-4 {
+    animation-duration: var(--xx-time);
+    animation-delay: 4s;
+}
+
+.osa-animBoxItem-1 .bx-anim-text .osa-animtext-5 {
+    animation-duration: var(--xx-time);
+    animation-delay: 4.5s;
+}
+
+.osa-animBoxItem-1 .bx-anim-text .osa-animtext-6 {
+    animation-duration: var(--xx-time);
+    animation-delay: 5s;
+}
+
+.osa-animBoxItem-1 .bx-anim-text .osa-animtext-7 {
+    animation-duration: var(--xx-time);
+    animation-delay: 5.5s;
+    animation-fill-mode: forwards;
+}
+
+/* ------ */
+@keyframes animTextHide {
     from {
         opacity: 1;
     }
@@ -576,212 +686,19 @@ header .navbar-nav .nav-link:hover {
     }
 }
 
-.anim-second .anim-icons .anim-icon:nth-child(1) {
-    bottom: 0;
-    left: 0;
-    animation-name: iconvisible;
-    animation-duration: 2s;
+.osa-animBoxItem-1 .bx-anim-text .osa-animtext-3 .a-text-xx {
+    animation-name: animTextHide;
+    animation-duration: .2s;
+    animation-delay: 3.5s;
     animation-fill-mode: forwards;
 }
 
-.anim-second .anim-icons .anim-icon:nth-child(2) {
-    bottom: 0;
-    left: 40.6976%;
-    animation-name: iconvisible;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-    animation-delay: 2s;
-}
-
-.anim-second .anim-icons .anim-icon:nth-child(3) {
-    bottom: 0;
-    right: 0;
-    animation-name: iconvisible;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-    animation-delay: 4s;
-}
-
-.anim-second .anim-icons .anim-icon:nth-child(4) {
-    bottom: 40.6976%;
-    right: 0;
-    animation-name: iconvisible;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-    animation-delay: 6s;
-}
-
-.anim-second .anim-icons .anim-icon:nth-child(5) {
-    top: 0;
-    right: 0;
-    animation-name: iconvisible;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-    animation-delay: 8s;
-}
-
-.anim-second .anim-icons .anim-icon:nth-child(6) {
-    top: 0;
-    left: 40.6976%;
-    animation-name: iconvisible;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-    animation-delay: 10s;
-}
-
-.anim-second .anim-icons .anim-icon:nth-child(7) {
-    top: 0;
-    left: 0;
-    animation-name: iconvisible;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-    animation-delay: 12s;
-}
-
-/* -------------animation box Ends------------- */
-
-
-
-/* ---------- anim first */
-.anim-first .anim-texts .anim-text:nth-child(1) {
-    animation-name: animtextvisible;
-    animation-duration: 2s;
-    animation-timing-function: linear;
-}
-
-.anim-first .anim-texts .anim-text:nth-child(2) {
-    animation-name: animtextvisible;
-    animation-duration: 2s;
-    animation-timing-function: linear;
-    animation-delay: 2s;
-}
-
-.anim-first .anim-texts .anim-text:nth-child(3) {
-    animation-name: animtextvisible;
-    animation-duration: 1s;
-    animation-timing-function: linear;
-    animation-delay: 4s;
-}
-
-.anim-first .anim-texts .anim-text:nth-child(8) {
-    animation-name: animtextvisible2;
-    animation-duration: 1s;
-    animation-timing-function: linear;
-    animation-fill-mode: forwards;
-    animation-delay: 5s;
-}
-
-.anim-first .anim-texts .anim-text:nth-child(8) .big-x {
-    animation-name: textS;
-    animation-duration: .3s;
-    animation-timing-function: linear;
-    animation-fill-mode: forwards;
-    animation-delay: 5.6s;
-}
-
-.anim-first .anim-texts .anim-text:nth-child(4) {
-    animation-name: animtextvisible;
-    animation-duration: .5s;
-    animation-timing-function: linear;
-    animation-delay: 6s;
-}
-
-.anim-first .anim-texts .anim-text:nth-child(5) {
-    animation-name: animtextvisible;
-    animation-duration: .5s;
-    animation-timing-function: linear;
-    animation-delay: 6.5s;
-}
-
-.anim-first .anim-texts .anim-text:nth-child(6) {
-    animation-name: animtextvisible;
-    animation-duration: .5s;
-    animation-timing-function: linear;
-    animation-delay: 7s;
-}
-
-.anim-first .anim-texts .anim-text:nth-child(7) {
-    animation-name: animtextvisible2;
-    animation-duration: .5s;
-    animation-timing-function: linear;
-    animation-fill-mode: forwards;
-    animation-delay: 7.5s;
-}
-
-/* --------icons */
-.anim-first .anim-icons .anim-icon:nth-child(1) {
-    bottom: 0;
-    left: 0;
-    animation-name: iconvisible;
-    animation-duration: 2s;
+.bx-anim-text .osa-animtext-3 .s-txt {
+    animation-name: animTextHide;
+    animation-duration: .2s;
+    animation-delay: 3.5s;
     animation-fill-mode: forwards;
 }
-
-.anim-first .anim-icons .anim-icon:nth-child(2) {
-    bottom: 0;
-    left: 40.6976%;
-    animation-name: iconvisible;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-    animation-delay: 2s;
-}
-
-.anim-first .anim-icons .anim-icon:nth-child(3) {
-    bottom: 0;
-    right: 0;
-    animation-name: iconvisible;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-    animation-delay: 4s;
-}
-
-.anim-first .anim-icons .anim-icon:nth-child(8) {
-    bottom: 0;
-    left: 40.6976%;
-    animation-name: iconvisible;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    animation-delay: 5s;
-}
-
-.anim-first .anim-icons .anim-icon:nth-child(4) {
-    bottom: 40.6976%;
-    right: 0;
-    animation-name: iconvisible;
-    animation-duration: .5s;
-    animation-fill-mode: forwards;
-    animation-delay: 6s;
-}
-
-.anim-first .anim-icons .anim-icon:nth-child(5) {
-    top: 0;
-    right: 0;
-    animation-name: iconvisible;
-    animation-duration: .5s;
-    animation-fill-mode: forwards;
-    animation-delay: 6.5s;
-}
-
-.anim-first .anim-icons .anim-icon:nth-child(6) {
-    top: 0;
-    left: 40.6976%;
-    animation-name: iconvisible;
-    animation-duration: .5s;
-    animation-fill-mode: forwards;
-    animation-delay: 7s;
-}
-
-.anim-first .anim-icons .anim-icon:nth-child(7) {
-    top: 0;
-    left: 0;
-    animation-name: iconvisible;
-    animation-duration: .5s;
-    animation-fill-mode: forwards;
-    animation-delay: 7.5s;
-}
-
-/* -----------anim first ends */
-
 
 /* ============= Service section ===== */
 #services {
@@ -833,7 +750,7 @@ header .navbar-nav .nav-link:hover {
 }
 
 /* =========== Our Stories ========= */
-.bx-stories-wrapper {
+/* .bx-stories-wrapper {
     border-radius: 40px;
     background-color: #EBFFB3;
     padding: 80px 40px 0;
@@ -1026,7 +943,7 @@ header .navbar-nav .nav-link:hover {
     animation-timing-function: linear;
     animation-fill-mode: forwards;
     animation-duration: 4s;
-}
+} */
 
 /* ========== Footer ====== */
 .bx-footer-main {
